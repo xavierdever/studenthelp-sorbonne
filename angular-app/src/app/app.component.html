@@ -1,0 +1,7 @@
+<app-loading *ngIf="loadingRequest"></app-loading>
+<ng-container *ngIf="!loadingRequest">
+  <div [class]="theme">
+    <app-navigation (changeTheme)="changeTheme($event)"></app-navigation>
+    <router-outlet></router-outlet>
+  </div>
+</ng-container>

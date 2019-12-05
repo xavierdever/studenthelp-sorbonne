@@ -1,0 +1,31 @@
+<br><br><br><br>
+<div class="contact-container container" fxLayout="row" fxLayoutAlign="center none">
+  <mat-card class="contact-card">
+    <mat-card-header>
+      <mat-label>Contact</mat-label>
+    </mat-card-header>
+    <br>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+      <mat-form-field class="contact-full-width">
+        <input matInput placeholder="Nom" formControlName="name" required>
+      </mat-form-field>
+
+      <mat-form-field class="contact-full-width">
+        <input matInput type="email" placeholder="Email" formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field class="contact-full-width">
+        <input matInput placeholder="Sujet" formControlName="subject" required>
+      </mat-form-field>
+
+      <mat-form-field class="contact-full-width">
+        <textarea matInput placeholder="Message" formControlName="message"></textarea>
+      </mat-form-field>
+      <br>
+      <button [disabled]="contactForm.invalid" mat-raised-button color="primary">Envoyer</button>
+    </form>
+    <br>
+    <mat-error>{{errorMessage}}</mat-error>
+  </mat-card>
+</div>

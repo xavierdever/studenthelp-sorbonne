@@ -1,0 +1,26 @@
+<div class="blog-container container" fxLayout="row" fxLayoutAlign="center none">
+  <mat-card class="blog-card">
+    <mat-card-header>
+      <mat-label>Modifier un article</mat-label>
+    </mat-card-header>
+    <br>
+    <form [formGroup]="blogForm" (ngSubmit)="onEdit()">
+
+      <mat-form-field class="blog-full-width">
+        <input matInput placeholder="Titre article" formControlName="title" [ngModel]="blogActual?.title" required>
+      </mat-form-field>
+
+      <mat-form-field class="blog-full-width">
+        <input matInput placeholder="Image" formControlName="image" [ngModel]="blogActual?.image" required>
+      </mat-form-field>
+
+      <mat-form-field class="blog-full-width">
+        <textarea matInput placeholder="Description" formControlName="description" [ngModel]="blogActual?.description"></textarea>
+      </mat-form-field>
+      <br>
+      <button [disabled]="blogForm.invalid" mat-raised-button color="primary">Modifier</button>
+    </form>
+    <br>
+    <mat-error>{{errorMessage}}</mat-error>
+  </mat-card>
+</div>

@@ -1,0 +1,32 @@
+<div class="signup-container container" fxLayout="row" fxLayoutAlign="center none">
+  <mat-card class="signup-card">
+    <mat-card-header>
+      <mat-label>Inscription</mat-label>
+    </mat-card-header>
+    <br>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field class="building-full-width">
+          <input matInput placeholder="Entrez votre email" formControlName="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-form-field class="building-full-width">
+          <input formControlName="password" matInput placeholder="Entrez votre mot de passe" [type]="hide ? 'password' : 'text'">
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-form-field class="building-full-width">
+          <input formControlName="confirmPassword" matInput placeholder="Confirmez votre mot de passe" [type]="hide ? 'password' : 'text'">
+        </mat-form-field>
+      </mat-card-content>
+      <br>
+      <button [disabled]="signUpForm.invalid" mat-raised-button color="primary">S'inscrire</button>
+    </form>
+    <br>
+    <mat-error>{{errorMessage}}</mat-error>
+  </mat-card>
+</div>

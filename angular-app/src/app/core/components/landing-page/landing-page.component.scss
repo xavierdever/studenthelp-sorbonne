@@ -1,0 +1,52 @@
+.container {
+  margin: 10%;
+}
+
+.parallax {
+  height: 200%;
+  background-size: 110%;
+}
+
+.title {
+  color: white;
+}
+
+#parallax-accueil {
+  background-image: url('../../../../assets/roch.jpg');
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#parallax-about {
+  /* Set a specific height */
+  height: 75vh;
+}
+
+#parallax-contact {
+  background-image: url('../../../../assets/space.jpg');
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon {
+  transform: scale(1.7);
+}
+
+.footer {
+  bottom: 0;
+  height: 7%;
+}

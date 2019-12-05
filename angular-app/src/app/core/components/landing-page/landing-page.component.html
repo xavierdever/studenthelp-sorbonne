@@ -1,0 +1,35 @@
+<div class="mat-typography">
+  <div class="parallax" id="parallax-accueil" fxLayout="column" fxLayoutAlign="center center">
+    <br>
+    <h1 class="title mat-h1"> BIENVENUE SUR BLOCMOVE </h1>
+    <br>
+  </div>
+  <div class="parallax" id="parallax-about" fxLayout="column" fxLayoutAlign="center center">
+    <br>
+    <h1 class="title mat-h1">- PLUS D'INFOS -</h1>
+    <br>
+    <p style="color: white;" class="container">
+      Rati longe alacriter muri locari revocavere et rati concitat pugnantium longe ductores certamen certamen parans
+      parans rati muri longe bene certamen quorum alacriter bene bene explicatis cunctorum distarent locari ordinibus
+      iam
+      sed eum consurgentem poterat rati ductores in certamen scuta parans parans miles iam et cunctorum qui sed
+      revocavere iram.
+    </p>
+    <button mat-flat-button color="primary" (click)="onCV()">Télécharger la brochure</button>
+    <br>
+  </div>
+  <div class="parallax" id="parallax-contact" fxLayout="column" fxLayoutAlign="center center">
+    <br>
+    <h1 class="title mat-h1">- CONTACT -</h1>
+    <app-contact></app-contact>
+    <br>
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="50px">
+      <mat-icon class="icon" (click)="onSocialNetwork('https://www.instagram.com/klimberz/')" svgIcon="instagram"></mat-icon>
+      <mat-icon class="icon" (click)="onSocialNetwork('https://fr-fr.facebook.com/klimberz/')" svgIcon="linkedin"></mat-icon>
+      <mat-icon class="icon" (click)="onSocialNetwork('https://twitter.com/klimberz')" svgIcon="pinterest"></mat-icon>
+    </div>
+  </div>
+</div>
+<mat-toolbar class="footer mat-typography" fxLayoutAlign="space-around center">
+  <button mat-button id="copyright">© 2019 - MBAPE Pierre</button>
+</mat-toolbar>

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" id="toolbar">
+  <mat-toolbar-row>
+    <button mat-button (click)="onNavigate(['./blogs'])">Blogs</button>
+    <span class="fill-remaining-space"></span>
+    <button mat-button [matMenuTriggerFor]="theme">
+      <mat-icon>format_color_fill</mat-icon>
+    </button>
+    <mat-menu #theme="matMenu">
+      <button mat-menu-item (click)="onTheme('light-theme')">Light</button>
+      <button mat-menu-item (click)="onTheme('black-theme')">Dark</button>
+      <button mat-menu-item (click)="onTheme('default-theme')">Bleue</button>
+    </mat-menu>
+    <!--
+    <button *ngIf="!isLoggedIn()" mat-button (click)="onNavigate(['./auth', 'signup'])">Inscription</button>
+    -->
+    <button *ngIf="!isLoggedIn()" mat-button (click)="onNavigate(['./auth', 'signin'])">Connexion</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onNavigate(['./account', 'profile'])">Infos</button>
+      <button mat-menu-item (click)="onSignOut()">Déconnexion</button>
+    </mat-menu>
+    <button *ngIf="isLoggedIn()" mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,16 @@
+<div class="blog-show" fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-card class="blog-card">
+    <mat-card-header>
+      <mat-card-title>{{blog?.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{blog?.image}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{blog?.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center">
+      <button [routerLink]="['/blogs']" mat-button>Retour</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

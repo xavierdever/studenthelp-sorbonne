@@ -1,0 +1,28 @@
+version: '3'
+services:
+  eureka-server:
+    image: spring-setup-eureka-server:latest
+    container_name: eureka-server
+    expose:
+      - "8761"
+  blog-service:
+    image: spring-setup-blog-service:latest
+    container_name: blog-service
+    expose:
+      - "8762"
+    depends_on:
+      - "eureka-server"
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://registry:8761/eureka
+  gateway-server:
+    image: spring-setup-gateway-server:latest
+    container_name: gateway-server
+    ports:
+      - "127.0.0.1:8080:8760"
+    depends_on:
+      - eureka-server
+      - blog-service
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://registry:8761/eureka

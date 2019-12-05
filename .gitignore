@@ -1,0 +1,7 @@
+.mvn
+.idea
+*.env
+*.jks
+public.txt
+postgres_db/
+.DS_Store

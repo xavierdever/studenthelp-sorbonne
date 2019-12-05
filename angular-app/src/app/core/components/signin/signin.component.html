@@ -1,0 +1,27 @@
+<div class="signin-container container" fxLayout="row" fxLayoutAlign="center none">
+  <mat-card class="signin-card">
+    <mat-card-header>
+      <mat-label>Connexion</mat-label>
+    </mat-card-header>
+    <br>
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field class="signin-full-width">
+          <input [disabled]="loadingRequest" matInput placeholder="Entrez votre email" formControlName="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-form-field class="signin-full-width">
+          <input formControlName="password" matInput placeholder="Entrez votre mot de passe" [type]="hide ? 'password' : 'text'"
+            [disabled]="loadingRequest">
+        </mat-form-field>
+      </mat-card-content>
+      <br>
+      <button [disabled]="signInForm.invalid || loadingRequest" mat-raised-button color="primary">Se connecter</button>
+    </form>
+    <br>
+    <mat-error>{{errorMessage}}</mat-error>
+  </mat-card>
+</div>
