@@ -13,25 +13,25 @@ export const APP_ROUTES: Routes = [
   {
     path: 'auth/signup',
     component: SignupComponent,
-    canActivate: [NotAuthGuardService],
+    canActivate: [AuthGuardService],
     data: {title: 'Inscription'}
   },
   {
     path: 'auth/signin',
     component: SigninComponent,
-    canActivate: [NotAuthGuardService],
+    canActivate: [AuthGuardService],
     data: {title: 'Connexion'}
   },
   {
     path: 'blogs',
     redirectTo: '/blogs',
     pathMatch: 'full',
-    // canActivate: [NotAuthGuardService],
+    canActivate: [NotAuthGuardService],
   },
   {
     path: 'welcome',
     component: LandingPageComponent,
-    canActivate: [NotAuthGuardService],
+   // canActivate: [NotAuthGuardService],
   },
   {
     path: '',

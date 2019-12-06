@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/forms';
-import {Router} from '@angular/router';
-import {AuthenticationService} from '../../services/authentication/authentication.service';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication/authentication.service';
 
 @Component({
   selector: 'app-signin',
@@ -55,7 +55,7 @@ export class SigninComponent implements OnInit {
       this.auth.login(userForm)
         .then(res => {
           if (res) {
-            this.router.navigate(['/blocmove']);
+            this.router.navigate(['/blogs']);
           }
         }).catch(err => {
         this.errorMessage = 'Email ou mot de passe non valide';

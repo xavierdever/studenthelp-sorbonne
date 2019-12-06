@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {UserDetails} from '../../../shared/class/User';
-import {ApiHelperService} from '../api-helper/api-helper.service';
+import { Injectable } from '@angular/core';
+import { UserDetails } from '../../../shared/class/User';
+import { ApiHelperService } from '../api-helper/api-helper.service';
 
 export interface Token {
   access_token: string;
@@ -27,7 +27,6 @@ export class AuthenticationService {
     return this.api.requestApi({
       action: '/uaa/oauth/token',
       method: 'POST',
-      // api: '',
       headers: this.api.buildHttpHeaders(),
       data: param
     })
@@ -48,13 +47,13 @@ export class AuthenticationService {
    * Inscription
    */
   // TODO : implement signup
-  public register({email, password}: { email: string, password: string }): Promise<boolean> {
+  public register({ email, password }: { email: string, password: string }): Promise<boolean> {
     const data = {
       email,
       password
     };
 
-    return this.api.requestApi({action: '/signup', method: 'POST', data})
+    return this.api.requestApi({ action: '/signup', method: 'POST', data })
       .then((res) => {
         if (!res.token) {
           return false;

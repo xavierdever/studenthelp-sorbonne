@@ -20,9 +20,9 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         String name = authentication.getName();
         String password = authentication.getCredentials().toString();
 
-        if (name.equals("admin") && password.equals("password")) {
+        if (name.equals("admin2@admin.com") && password.equals("password")) {
             UserProfile userProfile = new UserProfile(
-                    "admin",
+                    "admin2@admin.com",
                     "password",
                     true,
                     true,

@@ -51,6 +51,7 @@ export class ApiHelperService {
         return data;
       })
       .catch(err => {
+        console.log(JSON.stringify(err));
         throw new Error(err);
       });
   }
@@ -63,6 +64,7 @@ export class ApiHelperService {
     return new HttpParams()
       .set('username', username)
       .set('password', password)
+      .set('client_id', 'spring-setup')
       .set('grant_type', 'password');
   }
 
