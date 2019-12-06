@@ -7,10 +7,12 @@ import {SharedModule} from './shared/shared.module';
 import { BlogModule } from './features/blog/blog.module';
 import { CoreModule } from './core/core.module';
 import 'hammerjs';
+import { CoddityComponent } from './features/coddity/coddity.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CoddityComponent,
   ],
   imports: [
     BlogModule,

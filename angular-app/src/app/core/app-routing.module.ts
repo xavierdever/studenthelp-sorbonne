@@ -7,6 +7,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import {CoddityComponent} from "../features/coddity/coddity.component";
 
 
 export const APP_ROUTES: Routes = [
@@ -27,6 +28,10 @@ export const APP_ROUTES: Routes = [
     redirectTo: '/blogs',
     pathMatch: 'full',
     canActivate: [NotAuthGuardService],
+  },
+  {
+    path: 'coddity',
+    component: CoddityComponent,
   },
   {
     path: 'welcome',
