@@ -8,6 +8,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  let rep;
   loadingRequest: boolean;
   theme = 'black-theme';
   production = environment.production;
@@ -39,5 +40,15 @@ export class AppComponent implements OnInit {
       overlayContainerClasses.remove(...themeClassesToRemove);
     }
     overlayContainerClasses.add(theme);
+  }
+ 
+  swipeLeft() {
+    rep=false;
+    this.store.dispatch(new appActions.SwipeLeft());
+  }
+ 
+  swipeRight() {
+	rep=true;
+    this.store.dispatch(new appActions.SwipeRight());
   }
 }

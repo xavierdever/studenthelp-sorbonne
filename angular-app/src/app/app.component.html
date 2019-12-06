@@ -1,3 +1,10 @@
+<div (swipeleft)="swipeLeft()"
+     (swiperight)="swipeRight()"
+     class="main-content">
+  <h1>Swipe pour repondre</h1>
+  <h3> Non </h3>  <app-current-question></app-current-question> <h3> Oui </h3> 
+</div>
+
 <app-loading *ngIf="loadingRequest"></app-loading>
 <ng-container *ngIf="!loadingRequest">
   <div [class]="theme">

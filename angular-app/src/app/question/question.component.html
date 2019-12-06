@@ -1,0 +1,8 @@
+<div *ngIf="recipe != null">
+  <h1>
+    Question {{index + 1}}
+  </h1>
+  <hr/>
+  <div *ngFor="let ingr of recipe.ingredients">{{text}}</div>
+  <hr/>
+</div>

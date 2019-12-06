@@ -1,0 +1,2 @@
+<h2 style="color: red">Current Question</h2>
+<app-question [question]="question[reponse]" [index]="currentIndex" </app-question>
