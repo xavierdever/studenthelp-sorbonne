@@ -26,7 +26,7 @@ export const APP_ROUTES: Routes = [
     path: 'blogs',
     redirectTo: '/blogs',
     pathMatch: 'full',
-    canActivate: [NotAuthGuardService],
+    // canActivate: [NotAuthGuardService],
   },
   {
     path: 'welcome',

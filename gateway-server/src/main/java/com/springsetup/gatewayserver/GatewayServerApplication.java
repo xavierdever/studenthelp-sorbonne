@@ -20,18 +20,18 @@ public class GatewayServerApplication {
 		SpringApplication.run(GatewayServerApplication.class, args);
 	}
 
-	/**
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/uaa/oauth/token").allowedOrigins("http://localhost:4200");
+				registry.addMapping("/uaa/oauth/token").allowedOrigins("*");
 			}
 		};
 	}
-*/
 
+
+	/**
 	@Bean
 	public CorsFilter corsFilter() {
 		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -49,4 +49,5 @@ public class GatewayServerApplication {
 		source.registerCorsConfiguration("/**", config);
 		return new CorsFilter(source);
 	}
+	*/
 }

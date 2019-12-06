@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: gateway-server
+
+server:
+  port: 8760
+
+zuul:
+  prefix: /api
+  routes:
+    blogs:
+      path: /blogs/**
+      serviceId: blog-service
+      stripPrefix: false
+    auth:
+      path: /uaa/**
+      serviceId: auth-server
+  sensitive-headers:
+
+security:
+  oauth2:
+    client:
+      client-id: gateway-server
+      client-secret: secret
+      access-token-uri: http://localhost:8763/oauth/token
+      user-authorization-uri: http://localhost:8763/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8763/user
+
+info:
+  app:
+    name: ${spring.application.name}
+
+eureka:
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+    healthcheck:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - mappings
+          - env
+          - health
+          - info
+          - gateway
