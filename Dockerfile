@@ -1,6 +1,6 @@
 # build stage
 FROM maven:latest AS build-env
-ADD .. /src
+ADD . /src
 RUN cd /src/eureka-server && mvn install
 
 # final stage
