@@ -1,11 +1,11 @@
 # build stage
 FROM maven:latest AS build-env
-ADD . /src
-RUN cd /src && mvn install
+ADD .. /src
+RUN cd /src/eureka-server && mvn install
 
 # final stage
 FROM openjdk:13-jdk-alpine
 WORKDIR /app
-COPY --from=build-env /src/target /app/
+COPY --from=build-env /src/eureka-server/target /app/
 EXPOSE 8761:8761
 CMD java -jar eureka-server-0.0.1-snapshot.jar
