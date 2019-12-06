@@ -1,0 +1,10 @@
+# build stage
+FROM angular/ngcontainer:0.8.0 AS build-env
+ADD . /src
+RUN cd /src/angular-app && npm install && ng build
+
+# final stage
+FROM httpd:alpine
+COPY --from=build-env /src/angular-app/dist/ /usr/local/apache2/htdocs/
+EXPOSE 80
+CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]

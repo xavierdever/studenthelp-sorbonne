@@ -1,3 +1,7 @@
 build:
   docker:
     eureka: Dockerfile-eureka
+    auth: Dockerfile-auth
+    gateway: Dockerfile-gateway
+    blog: Dockerfile-blog
+    web: Dockerfile-andular

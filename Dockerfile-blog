@@ -1,0 +1,11 @@
+# build stage
+FROM maven:latest AS build-env
+ADD . /src
+RUN cd /src/blog-service && mvn install
+
+# final stage
+FROM openjdk:13-jdk-alpine
+WORKDIR /app
+COPY --from=build-env /src/blog-service/target /app/
+EXPOSE 8762
+CMD java -jar blog-service-0.0.1-snapshot.jar

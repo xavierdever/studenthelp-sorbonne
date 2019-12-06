@@ -1,0 +1,11 @@
+# build stage
+FROM maven:latest AS build-env
+ADD . /src
+RUN cd /src/auth-server && mvn install
+
+# final stage
+FROM openjdk:13-jdk-alpine
+WORKDIR /app
+COPY --from=build-env /src/auth-server/target /app/
+EXPOSE 8763
+CMD java -jar auth-server-0.0.1-snapshot.jar
