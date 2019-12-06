@@ -1,4 +1,4 @@
-package com.springsetup.blogservice.model;
+package com.springsetup.forumservice.model;
 
 import javax.persistence.*;
 

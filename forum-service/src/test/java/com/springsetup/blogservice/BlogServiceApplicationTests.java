@@ -1,10 +1,10 @@
-package com.springsetup.blogservice;
+package com.springsetup.forumservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BlogServiceApplicationTests {
+class ForumServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

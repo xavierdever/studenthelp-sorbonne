@@ -1,4 +1,4 @@
-package com.springsetup.blogservice.exception;
+package com.springsetup.forumservice.exception;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;

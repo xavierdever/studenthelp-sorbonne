@@ -1,8 +1,8 @@
 package com.springsetup.blogservice.controller;
 
-import com.springsetup.blogservice.exception.BlogNotFoundException;
-import com.springsetup.blogservice.model.Blog;
-import com.springsetup.blogservice.service.BlogService;
+import com.springsetup.forumservice.exception.BlogNotFoundException;
+import com.springsetup.forumservice.model.Blog;
+import com.springsetup.forumservice.service.BlogService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

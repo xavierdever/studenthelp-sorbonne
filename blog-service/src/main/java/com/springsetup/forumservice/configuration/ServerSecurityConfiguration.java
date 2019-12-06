@@ -1,7 +1,7 @@
-package com.springsetup.blogservice.configuration;
+package com.springsetup.forumservice.configuration;
 
-import com.springsetup.blogservice.exception.CustomAccessDeniedHandler;
-import com.springsetup.blogservice.exception.CustomAuthenticationEntryPoint;
+import com.springsetup.forumservice.exception.CustomAccessDeniedHandler;
+import com.springsetup.forumservice.exception.CustomAuthenticationEntryPoint;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

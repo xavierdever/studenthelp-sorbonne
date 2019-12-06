@@ -1,8 +1,8 @@
-package com.springsetup.blogservice.service.serviceImpl;
+package com.springsetup.forumservice.service.serviceImpl;
 
-import com.springsetup.blogservice.dao.BlogDao;
-import com.springsetup.blogservice.model.Blog;
-import com.springsetup.blogservice.service.BlogService;
+import com.springsetup.forumservice.dao.BlogDao;
+import com.springsetup.forumservice.model.Blog;
+import com.springsetup.forumservice.service.BlogService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

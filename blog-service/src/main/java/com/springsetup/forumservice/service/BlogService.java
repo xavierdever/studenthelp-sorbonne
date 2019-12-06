@@ -1,6 +1,6 @@
-package com.springsetup.blogservice.service;
+package com.springsetup.forumservice.service;
 
-import com.springsetup.blogservice.model.Blog;
+import com.springsetup.forumservice.model.Blog;
 
 import java.util.List;
 import java.util.Optional;

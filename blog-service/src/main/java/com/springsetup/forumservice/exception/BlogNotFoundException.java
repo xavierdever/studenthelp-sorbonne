@@ -1,4 +1,4 @@
-package com.springsetup.blogservice.exception;
+package com.springsetup.forumservice.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,4 +1,4 @@
-package com.springsetup.blogservice.configuration;
+package com.springsetup.forumservice.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

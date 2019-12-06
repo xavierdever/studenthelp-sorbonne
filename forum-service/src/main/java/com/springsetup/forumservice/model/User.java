@@ -1,4 +1,4 @@
-package com.springsetup.blogservice.model;
+package com.springsetup.forumservice.model;
 
 
 import java.text.DateFormat;
@@ -6,20 +6,22 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer idUser;
+    @Column(name="nom")
     private String nom;
+    @Column(name="prenom")
     private String prenom;
+    @Column(name="email")
     private String email;
+    @Column(name="dateNaissance")
     private Date dateNaissance;
+    @Column(name="mdp")
     private String mdp;
 
     public User(Integer idUser, String nom,String prenom,String email,Date dateNaissance,String mdp) {
@@ -71,9 +73,9 @@ public class User {
     public void insertComment(String text, Topic topic) {
         DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
-        Comment comment = new Comment(text, this, format.format(date), topic);
+        Comment comment = new Comment(text, this, date, topic);
     }
     public void insertTopic(String text) {
-        Topic topic = new Topic(text, this);
+        Topic topic = new Topic(text,idUser);
     }
 }
