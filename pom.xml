@@ -24,9 +24,9 @@
 	<modules>
 		<module>auth-server</module>
 		<module>blog-service</module>
-		<module>config-server</module>
 		<module>eureka-server</module>
 		<module>gateway-server</module>
+		<module>forum-service</module>
 	</modules>
 
 </project>

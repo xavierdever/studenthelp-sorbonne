@@ -8,9 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.spring-setup</groupId>
-	<artifactId>forum-service</artifactId>
+	<artifactId>blog-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>forum-service</name>
+	<name>blog-service</name>
 	<description>Setup project for Spring Boot</description>
 
 	<properties>
