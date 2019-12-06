@@ -1,39 +1,39 @@
-package com.springsetup.blogservice.service.serviceImpl;
+package com.springsetup.forumservice.service.serviceImpl;
 
-import com.springsetup.blogservice.dao.BlogDao;
-import com.springsetup.blogservice.model.Blog;
-import com.springsetup.blogservice.service.BlogService;
+import com.springsetup.forumservice.dao.ForumDao;
+import com.springsetup.forumservice.model.Forum;
+import com.springsetup.forumservice.service.ForumService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class BlogServiceImpl implements BlogService {
+public class ForumServiceImpl implements ForumService {
 
-    private BlogDao blogDao;
+    private ForumDao forumDao;
 
-    BlogServiceImpl(BlogDao blogDao) {
-        this.blogDao = blogDao;
+    ForumServiceImpl(ForumDao forumDao) {
+        this.forumDao = forumDao;
     }
 
     @Override
-    public List<Blog> getAllBlogs() {
-        return this.blogDao.findAll();
+    public List<Forum> getAllForums() {
+        return this.forumDao.findAll();
     }
 
     @Override
-    public Optional<Blog> getBlogById(long id) {
-        return this.blogDao.findById(id);
+    public Optional<Forum> getForumById(long id) {
+        return this.forumDao.findById(id);
     }
 
     @Override
-    public void saveBlog(Blog blog) {
-        this.blogDao.save(blog);
+    public void saveForum(Forum forum) {
+        this.forumDao.save(forum);
     }
 
     @Override
-    public void deleteBlog(long id) {
-        this.blogDao.deleteById(id);
+    public void deleteForum(long id) {
+        this.forumDao.deleteById(id);
     }
 }

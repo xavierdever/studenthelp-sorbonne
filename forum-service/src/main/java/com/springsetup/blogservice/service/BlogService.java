@@ -1,16 +1,16 @@
-package com.springsetup.blogservice.service;
+package com.springsetup.forumservice.service;
 
-import com.springsetup.blogservice.model.Blog;
+import com.springsetup.forumservice.model.Forum;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface BlogService {
-    List<Blog> getAllBlogs();
+public interface ForumService {
+    List<Forum> getAllForums();
 
-    Optional<Blog> getBlogById(long id);
+    Optional<Forum> getForumById(long id);
 
-    void saveBlog(Blog blog);
+    void saveForum(Forum forum);
 
-    void deleteBlog(long id);
+    void deleteForum(long id);
 }

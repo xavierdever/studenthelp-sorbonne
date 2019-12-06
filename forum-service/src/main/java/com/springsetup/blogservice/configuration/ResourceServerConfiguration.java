@@ -1,4 +1,4 @@
-package com.springsetup.blogservice.configuration;
+package com.springsetup.forumservice.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     public void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/blogs/**")
+                .antMatchers("/forums/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated();

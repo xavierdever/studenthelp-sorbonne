@@ -1,5 +1,5 @@
 -- data.sql
-INSERT INTO blog(title, image, description, cols_ui, rows_ui)
+INSERT INTO forum(title, image, description, cols_ui, rows_ui)
 VALUES ('Lion', 'https://images5.alphacoders.com/687/thumb-1920-687579.jpg', 'Nat Geo Wild', 1, 2),
        ('Léopard',
         'https://fr.cdn.v5.futura-sciences.com/buildsv6/images/mediumoriginal/0/0/a/00a169e094_103744_leopard-rosettes.jpg',

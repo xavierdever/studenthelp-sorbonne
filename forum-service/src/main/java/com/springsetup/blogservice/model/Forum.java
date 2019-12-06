@@ -1,10 +1,10 @@
-package com.springsetup.blogservice.model;
+package com.springsetup.forumservice.model;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="blog")
-public class Blog {
+@Table(name="forum")
+public class Forum {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,10 +20,10 @@ public class Blog {
     @Column(name="rows_ui")
     private int rows;
 
-    public Blog() {
+    public Forum() {
     }
 
-    public Blog(String title, String image, String description, int cols, int rows) {
+    public Forum(String title, String image, String description, int cols, int rows) {
         this.title = title;
         this.image = image;
         this.description = description;
@@ -81,7 +81,7 @@ public class Blog {
 
     @Override
     public String toString() {
-        return "Blog{" +
+        return "Forum{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", image='" + image + '\'' +

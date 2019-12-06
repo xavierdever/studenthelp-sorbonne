@@ -1,13 +1,13 @@
-package com.springsetup.blogservice;
+package com.springsetup.forumservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlogServiceApplication {
+public class ForumServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BlogServiceApplication.class, args);
+		SpringApplication.run(ForumServiceApplication.class, args);
 	}
 
 }

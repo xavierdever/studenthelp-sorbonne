@@ -1,4 +1,4 @@
-package com.springsetup.blogservice.exception;
+package com.springsetup.forumservice.exception;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;

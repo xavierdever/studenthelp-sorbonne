@@ -1,5 +1,5 @@
 -- schema.sql
-CREATE TABLE IF NOT EXISTS blog
+CREATE TABLE IF NOT EXISTS forum
 (
     id          SERIAL PRIMARY KEY,
     title       VARCHAR(255),
