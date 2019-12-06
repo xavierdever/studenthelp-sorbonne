@@ -1,7 +1,7 @@
 # build stage
 FROM angular/ngcontainer:0.8.0 AS build-env
-ADD . /src
-RUN cd /src/angular-app && npm install && ng build
+ADD . src
+RUN cd src/angular-app && npm install && ng build
 
 # final stage
 FROM httpd:alpine

@@ -27,7 +27,7 @@ security:
       client-id: spring-setup
       client-secret: spring-secret
       resource-id: oauth2-resource
-      access-token-uri: http://localhost:8763/oauth/token
+      access-token-uri: http://xavierdeverdun@gmail.com:Miage2019_localhost:8763/oauth/token
       user-authorization-uri: http://localhost:8763/oauth/authorize
     resource:
       user-info-uri: http://localhost:8763/api/users/me

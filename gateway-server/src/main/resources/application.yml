@@ -22,10 +22,10 @@ security:
     client:
       client-id: gateway-server
       client-secret: secret
-      access-token-uri: http://localhost:8763/oauth/token
-      user-authorization-uri: http://localhost:8763/oauth/authorize
+      access-token-uri: http://xavierdeverdun@gmail.com:Miage2019_localhost:8763/oauth/token
+      user-authorization-uri: http://xavierdeverdun@gmail.com:Miage2019_localhost:8763/oauth/authorize
     resource:
-      userInfoUri: http://localhost:8763/user
+      userInfoUri: http://xavierdeverdun@gmail.com:Miage2019_localhost:8763/user
 
 info:
   app:
@@ -35,7 +35,7 @@ eureka:
   client:
     registerWithEureka: true
     serviceUrl:
-      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_SERVER:http://xavierdeverdun@gmail.com:Miage2019_localhost:8761/eureka}
     healthcheck:
       enabled: true
 
