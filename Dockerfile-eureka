@@ -7,5 +7,5 @@ RUN cd /src/eureka-server && mvn install
 FROM openjdk:13-jdk-alpine
 WORKDIR /app
 COPY --from=build-env /src/eureka-server/target /app/
-EXPOSE 8761:80
+EXPOSE 8761
 CMD java -jar eureka-server-0.0.1-snapshot.jar
