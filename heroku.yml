@@ -4,4 +4,4 @@ build:
     auth: Dockerfile-auth
     gateway: Dockerfile-gateway
     blog: Dockerfile-blog
-    web: Dockerfile-andular
+    web: Dockerfile-angular
